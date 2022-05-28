@@ -1,0 +1,16 @@
+
+
+@import "../../node_modules/overlayscrollbars/css/OverlayScrollbars.min.css";
+@import "../../node_modules/choices.js/public/assets/styles/base.css";
+@import "../../node_modules/choices.js/public/assets/styles/choices.min.css";
+@import "../../node_modules/dropzone/dist/basic.css";
+@import "../../node_modules/dropzone/dist/dropzone.css";
+
+@import "./user.css";
+
+@import "./theme.css";
+
+@import '~@fortawesome/fontawesome-free/css/fontawesome';
+@import '~@fortawesome/fontawesome-free/css/regular';
+@import '~@fortawesome/fontawesome-free/css/solid';
+@import '~@fortawesome/fontawesome-free/css/brands';
