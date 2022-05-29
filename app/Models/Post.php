@@ -15,9 +15,12 @@ class Post extends Model
     }
     public function tags()
     {
-        return $this->hasMany(Tag::class, 'taggable');
+        return $this->belongstoMany(Tag::class);
     }
     public function attachments(){
         return $this->hasMany(Attachment::class);
+    }
+    public function editor(){
+        return $this->belongsTo(User::class,"user_id");
     }
 }

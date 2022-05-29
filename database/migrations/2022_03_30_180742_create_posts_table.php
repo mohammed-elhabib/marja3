@@ -17,7 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->longText('body');
-            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('vote')->default(0);
+            $table->integer('view')->default(0);
+            $table->foreignId('user_id')->references('id')->on('users')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

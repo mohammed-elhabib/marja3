@@ -32,9 +32,9 @@ class PostRepository extends BaseRepository
 
         $post = $this->create(["title" => $array["title"], "body" => $array["body"], "user_id" => $array["user_id"]]);
         if (key_exists("tags", $array))
-            foreach ($array["tags"] as $id) {
-                $post->tags()->attach([new Tag(["id" => $id])]);
-            }
+          //  foreach ($array["tags"] as $id) {
+                $post->tags()->attach($array["tags"]);//)[new Tag(["id" => $id])]);
+          //  }
 
         //$repository=new AttachmentRepository( $this->app);
         if (key_exists("attachemnt", $array))

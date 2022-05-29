@@ -27,9 +27,9 @@ class TagController extends Controller
      */
     public function list(Request $request)
     {
-        
+
        return $this->repository->all(['id','name'])->map(function($tag){
-           return ["label"=>$tag->name,"value"=>$tag->id];
+           return ["label"=>$tag->name,"value"=>$tag->id,"posts"=>$tag->posts];
        });
    }
 

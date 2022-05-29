@@ -56,24 +56,32 @@ class AttachmentController extends Controller
         $fileInfo = $image->getClientOriginalName();
         $filename = pathinfo($fileInfo, PATHINFO_FILENAME);
         $extension = pathinfo($fileInfo, PATHINFO_EXTENSION);
-        $file_name= $filename.'-'.time().'.'.$extension;
-        $image->storeAs("temps",$file_name,"public");
+        $file_name = $filename . '-' . time() . '.' . $extension;
+        $image->storeAs("temps", $file_name, "public");
 
-        $attachment=$this->repository->save(["path"=> $file_name,"name"=>$filename,"extension"=>$extension,"temp"=>true]);
+        $attachment = $this->repository->save(["path" => $file_name, "name" => $filename, "extension" => $extension, "temp" => true]);
 
         return   $attachment;
     }
-        /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function view(Request $request,$post_id)
+    public function view(Request $request, $post_id)
     {
 
         $post = $this->repository->find($post_id);
 
-        return view("post.view-post",compact("post"));
+        return view("post.view-post", compact("post"));
     }
+    /***
+     * add Post View
+     */
+    public function download($fileId)
+    {
+        $file = $this->repository->find($fileId);
 
+        return Storage::download("public/temps/".$file->path);
+    }
 }

@@ -1,8 +1,9 @@
 <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand">
 
+
     <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
     <a class="navbar-brand me-1 me-sm-3" href="index.html">
-      <div class="d-flex align-items-center"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span class="font-sans-serif">falcon</span>
+      <div class="d-flex align-items-center"><img class="me-2" src="{{asset('img/icons/spot-illustrations/falcon.png')}}" alt="" width="40" /><span class="font-sans-serif">falcon</span>
       </div>
     </a>
     <ul class="navbar-nav align-items-center d-none d-lg-block">
@@ -53,7 +54,7 @@
               <hr class="bg-200 dark__bg-900" />
               <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Files</h6><a class="dropdown-item px-card py-2" href="#!">
                 <div class="d-flex align-items-center">
-                  <div class="file-thumbnail me-2"><img class="border h-100 w-100 fit-cover rounded-3" src="assets/img/products/3-thumb.png" alt="" /></div>
+                  <div class="file-thumbnail me-2"><img class="border h-100 w-100 fit-cover rounded-3" src="{{asset('/img/products/3-thumb.png')}}" alt="" /></div>
                   <div class="flex-1">
                     <h6 class="mb-0 title">iPhone</h6>
                     <p class="fs--2 mb-0 d-flex"><span class="fw-semi-bold">Antony</span><span class="fw-medium text-600 ms-2">27 Sep at 10:30 AM</span></p>
@@ -62,7 +63,7 @@
               </a>
               <a class="dropdown-item px-card py-2" href="#!">
                 <div class="d-flex align-items-center">
-                  <div class="file-thumbnail me-2"><img class="img-fluid" src="assets/img/icons/zip.png" alt="" /></div>
+                  <div class="file-thumbnail me-2"><img class="img-fluid" src="{{asset('img/icons/zip.png')}}" alt="" /></div>
                   <div class="flex-1">
                     <h6 class="mb-0 title">Falcon v1.8.2</h6>
                     <p class="fs--2 mb-0 d-flex"><span class="fw-semi-bold">John</span><span class="fw-medium text-600 ms-2">30 Sep at 12:30 PM</span></p>
@@ -74,7 +75,7 @@
               <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Members</h6><a class="dropdown-item px-card py-2" href="pages/user/profile.html">
                 <div class="d-flex align-items-center">
                   <div class="avatar avatar-l status-online me-2">
-                    <img class="rounded-circle" src="assets/img/team/1.jpg" alt="" />
+                    <img class="rounded-circle" src="{{asset('img/team/1.jpg')}}" alt="" />
 
                   </div>
                   <div class="flex-1">
@@ -86,7 +87,7 @@
               <a class="dropdown-item px-card py-2" href="pages/user/profile.html">
                 <div class="d-flex align-items-center">
                   <div class="avatar avatar-l me-2">
-                    <img class="rounded-circle" src="assets/img/team/2.jpg" alt="" />
+                    <img class="rounded-circle" src="{{asset('img/team/2.jpg')}}" alt="" />
 
                   </div>
                   <div class="flex-1">
@@ -98,7 +99,7 @@
               <a class="dropdown-item px-card py-2" href="pages/user/profile.html">
                 <div class="d-flex align-items-center">
                   <div class="avatar avatar-l me-2">
-                    <img class="rounded-circle" src="assets/img/team/3.jpg" alt="" />
+                    <img class="rounded-circle" src="{{asset('img/team/3.jpg')}}" alt="" />
 
                   </div>
                   <div class="flex-1">
@@ -149,7 +150,7 @@
                   <a class="notification notification-flush notification-unread" href="#!">
                     <div class="notification-avatar">
                       <div class="avatar avatar-2xl me-3">
-                        <img class="rounded-circle" src="assets/img/team/1-thumb.png" alt="" />
+                        <img class="rounded-circle" src="{{asset('img/team/1-thumb.png')}}" alt="" />
 
                       </div>
                     </div>
@@ -243,7 +244,7 @@
             <a class="dropdown-item fw-bold text-warning" href="#!"><span class="fas fa-crown me-1"></span><span>Go Pro</span></a>
 
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#!">Set status</a>
+            <a class="dropdown-item" href="pages/user/profile.html">Set status</a>
             <a class="dropdown-item" href="pages/user/profile.html">Profile &amp; account</a>
             <a class="dropdown-item" href="#!">Feedback</a>
 
@@ -255,3 +256,4 @@
       </li>
     </ul>
   </nav>
+
